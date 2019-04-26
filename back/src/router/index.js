@@ -11,7 +11,9 @@ var router = new Router({
   routes: [
     {path: '/login', component: Login},
     {
-      path: '/index', component: Index, children: [
+      path: '/index',
+      component: Index,
+      children: [
         {path: '/', redirect: '/welcome'},
         {path: '/welcome', component: Welcome},
         {path: '/users', component: Users}
