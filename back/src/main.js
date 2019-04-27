@@ -6,6 +6,7 @@ import axios from 'axios'
 
 import './assets/css/global.less'
 import './assets/fonts/iconfont.css'
+import breadcrumb from './components/public/breadcrumb.vue'
 
 Vue.use(ElementUI)
 
@@ -22,6 +23,8 @@ axios.interceptors.request.use(function(config) {
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
+
+Vue.component('breadcrumb', breadcrumb)
 
 /* eslint-disable no-new */
 new Vue({
