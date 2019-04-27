@@ -33,7 +33,6 @@ export default {
   methods: {
     async getRightsData() {
       const {data: dt} = await this.$http.get('rights/list')
-      console.log(dt)
       if (dt.meta.status !== 200) {
         return this.$message.error(dt.meta.msg)
       }

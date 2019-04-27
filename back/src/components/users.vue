@@ -17,7 +17,7 @@
         </el-col>
       </el-row>
       <!--表格-->
-      <el-table :data="usersData" border stripe class="data-table">
+      <el-table :data="usersData" border stripe>
         <el-table-column type="index" label="序号" width="90"></el-table-column>
         <el-table-column prop="username" label="用户名" width="320"></el-table-column>
         <el-table-column prop="mobile" label="手机号码" width="320"></el-table-column>
