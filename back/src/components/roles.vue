@@ -5,7 +5,7 @@
     <el-card class="box-card">
       <!--添加新角色-->
       <div style="margin-bottom: 20px">
-        <el-button type="primary">添加角色</el-button>
+        <el-button type="primary" @click="addRoles()">添加角色</el-button>
       </div>
       <!--列表展示-->
       <el-table :data="rolesData" border stripe>
@@ -47,6 +47,21 @@
           </template>
         </el-table-column>
       </el-table>
+      <!--添加新角色-->
+      <el-dialog title="添加新角色" :visible.sync="addRolesBox">
+        <el-form ref="addRolesForm" :rules="addRolesRules" :model="addRolesForm" label-width="80px">
+          <el-form-item label="角色名称" prop="roleName">
+            <el-input v-model="addRolesForm.roleName"></el-input>
+          </el-form-item>
+          <el-form-item label="角色描述" prop="roleDesc">
+            <el-input v-model="addRolesForm.roleDesc"></el-input>
+          </el-form-item>
+        </el-form>
+        <div slot="footer" class="dialog-footer">
+          <el-button @click="addRolesBox = false">取 消</el-button>
+          <el-button type="primary" @click="submitAddRolesForm()">确 定</el-button>
+        </div>
+      </el-dialog>
       <!--编辑角色-->
       <el-dialog title="编辑角色" :visible.sync="editRolesBox">
         <el-form ref="editRolesForm" :rules="editRolesRules" :model="editRolesForm" label-width="80px">
@@ -90,15 +105,22 @@ export default {
   data() {
     return {
       rolesData: [],
+      addRolesBox: false,
       editRolesBox: false,
       assignRightsBox: false,
+      addRolesForm: {
+        roleName: '',
+        roleDesc: ''
+      },
+      addRolesRules: {
+        roleName: [{required: true, message: '请输入角色名称', trigger: 'blur'}]
+      },
       editRolesForm: {
         roleName: '',
         roleDesc: ''
       },
       editRolesRules: {
-        roleName: [{required: true, message: '请输入角色名称', trigger: 'blur'}],
-        roleDesc: [{required: true, message: '请输入角色描述', trigger: 'blur'}]
+        roleName: [{required: true, message: '请输入角色名称', trigger: 'blur'}]
       },
       rightsData: [],
       rightsTreeProps: {
@@ -119,6 +141,22 @@ export default {
         delete item.children
       })
       this.rolesData = dt.data
+    },
+    addRoles() {
+      this.addRolesBox = true
+    },
+    submitAddRolesForm() {
+      this.$refs.addRolesForm.validate(async(valid) => {
+        if (valid) {
+          const {data: dt} = await this.$http.post('roles', this.addRolesForm)
+          if (dt.meta.status !== 201) {
+            return this.$message.error(dt.meta.msg)
+          }
+          this.$message.success(dt.meta.msg)
+          this.addRolesBox = false
+          this.getRolesData()
+        }
+      })
     },
     delRights(role, rightsId) {
       this.$confirm('此操作将永久删除该条权限，是否继续？', '删除', {
