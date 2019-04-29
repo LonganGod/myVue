@@ -42,7 +42,8 @@
           <template slot-scope="info">
             <el-button type="primary" icon="el-icon-edit" size="mini" @click="editRoles(info.row.id)">编辑</el-button>
             <el-button type="danger" icon="el-icon-delete" size="mini" @click="delRoles(info.row.id)">删除</el-button>
-            <el-button type="warning" icon="el-icon-setting" size="mini" @click="assignRights()">权限分配</el-button>
+            <el-button type="warning" icon="el-icon-setting" size="mini" @click="assignRights(info.row)">权限分配
+            </el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -63,10 +64,18 @@
       </el-dialog>
       <!--分配角色-->
       <el-dialog title="分配权限" :visible.sync="assignRightsBox">
-        <el-tree :data="rightsData" :props="rightsTreeProps" node-key="id" default-expand-all show-checkbox></el-tree>
+        <el-tree
+          :data="rightsData"
+          :props="rightsTreeProps"
+          :default-checked-keys="defaultRights"
+          node-key="id"
+          default-expand-all
+          show-checkbox
+          ref="treeRef"
+        ></el-tree>
         <div slot="footer" class="dialog-footer">
           <el-button @click="assignRightsBox = false">取 消</el-button>
-          <el-button type="primary" @click="assignRightsBox = false">确 定</el-button>
+          <el-button type="primary" @click="setRights()">确 定</el-button>
         </div>
       </el-dialog>
     </el-card>
@@ -95,7 +104,8 @@ export default {
       rightsTreeProps: {
         label: 'authName',
         children: 'children'
-      }
+      },
+      defaultRights: []
     }
   },
   methods: {
@@ -159,13 +169,37 @@ export default {
         this.getRolesData()
       })
     },
-    async assignRights() {
+    async assignRights(role) {
       const {data: dt} = await this.$http.get('rights/tree')
       if (dt.meta.status !== 200) {
         return this.$message.error(dt.meta.msg)
       }
       this.rightsData = dt.data
+      var defaultRights = []
+      this.pushDefaultRights(role.son, defaultRights)
+      this.defaultRights = defaultRights
+      this.editRolesForm = role
       this.assignRightsBox = true
+    },
+    pushDefaultRights(rights, arr) {
+      rights.forEach(item => {
+        if (!item.children) {
+          return arr.push(item.id)
+        }
+        this.pushDefaultRights(item.children, arr)
+      })
+    },
+    async setRights() {
+      var ck1 = this.$refs.treeRef.getCheckedKeys()
+      var ck2 = this.$refs.treeRef.getHalfCheckedKeys()
+      var ck = ck1.concat(ck2).join(',')
+      const {data: dt} = await this.$http.post('roles/' + this.editRolesForm.id + '/rights', {rids: ck})
+      if (dt.meta.status !== 200) {
+        return this.$message.error(dt.meta.msg)
+      }
+      this.$message.success(dt.meta.msg)
+      this.getRolesData()
+      this.assignRightsBox = false
     }
   }
 }
