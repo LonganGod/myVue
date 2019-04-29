@@ -19,7 +19,6 @@
           :collapse-transition="false"
           :style=" isOpen ? {width: '65px'} : {width: '200px'} "
           :router="true">
-
           <el-submenu v-for="(item, index) in listData" :key="item.id" :index="item.id+''">
             <template slot="title">
               <i :class="'iconfont icon-' + listIcon[index]"></i>
