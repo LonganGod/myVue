@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2d6b0ec-463b-4e7a-b734-89a1d93456fb" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/back/src/components/roles.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/assets/css/global.less" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/assets/css/global.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/components/rights.vue" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/components/rights.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/components/users.vue" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/components/users.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/router/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,24 +17,32 @@
     <favorites_list name="myVue" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/back/src/components/roles.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="65" column="75" lean-forward="true" selection-start-line="65" selection-start-column="75" selection-end-line="65" selection-end-column="75" />
+            <state relative-caret-position="1260">
+              <caret line="191" column="22" selection-start-line="191" selection-start-column="22" selection-end-line="191" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#el-card#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
                 <element signature="n#el-table-column#0;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#el-table-column#4;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
                 <element signature="n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="e#1759#1764#0" />
-                <element signature="e#3362#3414#0" />
-                <element signature="e#3370#3532#0" />
-                <element signature="e#2651#2658#0" />
-                <element signature="e#2842#2935#0" />
-                <element signature="e#3405#3499#0" />
-                <element signature="e#4541#4748#0" />
-                <element signature="e#3522#3794#0" />
+                <element signature="n#el-dialog#1;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="n#el-tree#0;n#el-dialog#1;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+                <element signature="e#3859#3911#0" />
+                <element signature="e#3935#4093#0" />
+                <element signature="e#4140#4205#0" />
+                <element signature="e#4255#4541#0" />
+                <element signature="e#4573#5013#0" />
+                <element signature="e#5043#5273#0" />
+                <element signature="e#5307#5716#0" />
+                <element signature="e#5739#6160#0" />
+                <element signature="e#6187#6413#0" />
+                <element signature="e#6520#6527#0" />
+                <element signature="e#6972#7262#0" />
                 <element signature="n#style#0;n#!!top" />
               </folding>
             </state>
@@ -95,7 +98,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="width" value="976" />
     <option name="height" value="1088" />
@@ -120,34 +123,6 @@
               <item name="myVue" type="b2602c69:ProjectViewProjectNode" />
               <item name="myVue" type="462c0819:PsiDirectoryNode" />
               <item name="back" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myVue" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myVue" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myVue" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myVue" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,7 +203,8 @@
       <workItem from="1556068354767" duration="7471000" />
       <workItem from="1556249510516" duration="15702000" />
       <workItem from="1556284504465" duration="1000" />
-      <workItem from="1556345133097" duration="15535000" />
+      <workItem from="1556345133097" duration="15690000" />
+      <workItem from="1556516552345" duration="5504000" />
     </task>
     <task id="LOCAL-00001" summary="尝试push新文件">
       <created>1555334759622</created>
@@ -262,7 +238,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53069000" />
+    <option name="totallyTimeSpent" value="58728000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -274,15 +250,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985591" visible="true" weight="0.13066386" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985591" visible="true" weight="0.13066386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50144094" side_tool="true" weight="0.13066386" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.258547" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.258547" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -398,13 +374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/back/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -457,22 +426,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/back/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/back/src/components/roles.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="65" column="75" lean-forward="true" selection-start-line="65" selection-start-column="75" selection-end-line="65" selection-end-column="75" />
+        <state relative-caret-position="1260">
+          <caret line="191" column="22" selection-start-line="191" selection-start-column="22" selection-end-line="191" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#0;n#el-card#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#el-table-column#0;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-table-column#4;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="e#1759#1764#0" />
-            <element signature="e#3362#3414#0" />
-            <element signature="e#3370#3532#0" />
-            <element signature="e#2651#2658#0" />
-            <element signature="e#2842#2935#0" />
-            <element signature="e#3405#3499#0" />
-            <element signature="e#4541#4748#0" />
-            <element signature="e#3522#3794#0" />
+            <element signature="n#el-dialog#1;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-tree#0;n#el-dialog#1;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="e#3859#3911#0" />
+            <element signature="e#3935#4093#0" />
+            <element signature="e#4140#4205#0" />
+            <element signature="e#4255#4541#0" />
+            <element signature="e#4573#5013#0" />
+            <element signature="e#5043#5273#0" />
+            <element signature="e#5307#5716#0" />
+            <element signature="e#5739#6160#0" />
+            <element signature="e#6187#6413#0" />
+            <element signature="e#6520#6527#0" />
+            <element signature="e#6972#7262#0" />
             <element signature="n#style#0;n#!!top" />
           </folding>
         </state>
