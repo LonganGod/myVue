@@ -24,14 +24,15 @@
         <el-table-column prop="role_name" label="角色" width="200"></el-table-column>
         <el-table-column prop="email" label="邮箱" width="320"></el-table-column>
         <el-table-column prop="mg_state" label="状态" width="90">
-          <el-switch v-model="info.row.mg_state" slot-scope="info"></el-switch>
+          <el-switch v-model="info.row.mg_state" slot-scope="info"
+                     @change="chengeUserState(info.row, info.row.mg_state)"></el-switch>
         </el-table-column>
         <el-table-column label="操作">
           <template slot-scope="info">
             <el-button type="primary" icon="el-icon-edit" size="mini" @click="editUser(info.row.id)"></el-button>
             <el-button type="danger" icon="el-icon-delete" size="mini" @click="delUser(info.row.id)"></el-button>
             <el-tooltip class="item" effect="dark" content="分配角色" placement="top" :enterable="false">
-              <el-button type="warning" icon="el-icon-setting" size="mini"></el-button>
+              <el-button type="warning" icon="el-icon-setting" size="mini" @click="editNewRole(info.row)"></el-button>
             </el-tooltip>
           </template>
         </el-table-column>
@@ -85,6 +86,24 @@
           <el-button type="primary" @click="submitEditUserForm(editUserForm.id)">确 定</el-button>
         </div>
       </el-dialog>
+      <!--分配角色对话框-->
+      <el-dialog title="分配新角色" :visible.sync="editNewRoleBox">
+        <div>
+          <el-form ref="editNewRoleForm" :model="editNewRoleForm" label-width="100px">
+            <el-form-item label="当前的用户：">{{userRoleData.username}}</el-form-item>
+            <el-form-item label="当前的角色：">{{userRoleData.role_name}}</el-form-item>
+            <el-form-item label="分配新角色：">
+              <el-select v-model="editNewRoleForm.rid" placeholder="请选择新角色">
+                <el-option v-for="item in roleList" :key="item.id" :label="item.roleName" :value="item.id"></el-option>
+              </el-select>
+            </el-form-item>
+          </el-form>
+        </div>
+        <div slot="footer" class="dialog-footer">
+          <el-button @click="editNewRoleBox = false">取 消</el-button>
+          <el-button type="primary" @click="submitEditNewRole()">确 定</el-button>
+        </div>
+      </el-dialog>
     </el-card>
   </div>
 </template>
@@ -105,6 +124,7 @@ export default {
       totalPage: 0,
       addUserFormBox: false,
       editUserFormBox: false,
+      editNewRoleBox: false,
       addUserForm: {
         username: '',
         password: '',
@@ -135,7 +155,12 @@ export default {
           {required: true, message: '该项不能为空', trigger: 'blur'},
           {type: 'email', message: '请输入正确的邮箱格式', trigger: 'blur'}
         ]
-      }
+      },
+      userRoleData: {},
+      editNewRoleForm: {
+        rid: ''
+      },
+      roleList: []
     }
   },
   methods: {
@@ -207,6 +232,32 @@ export default {
           return false
         }
       })
+    },
+    async editNewRole(user) {
+      const {data: dt} = await this.$http.get('roles')
+      if (dt.meta.status !== 200) {
+        return this.$message.error(dt.meta.msg)
+      }
+      this.roleList = dt.data
+      this.userRoleData = user
+      this.editNewRoleBox = true
+    },
+    async submitEditNewRole() {
+      const {data: dt} = await this.$http.put(`users/${this.userRoleData.id}/role`, this.editNewRoleForm)
+      if (dt.meta.status !== 200) {
+        return this.$message.error(dt.meta.msg)
+      }
+      this.$message.success(dt.meta.msg)
+      this.getUsersData()
+      this.editNewRoleBox = false
+    },
+    async chengeUserState(user, state) {
+      const {data: dt} = await this.$http.put(`users/${user.id}/state/${state}`)
+      if (dt.meta.status !== 200) {
+        return this.$message.error(dt.meta.msg)
+      }
+      this.$message.success(dt.meta.msg)
+      this.getUsersData()
     }
   }
 }
