@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2d6b0ec-463b-4e7a-b734-89a1d93456fb" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/back/src/components/categories.vue" afterDir="false" />
+    <list default="true" id="f2d6b0ec-463b-4e7a-b734-89a1d93456fb" name="默认更改列表" comment="商品后台管理系统 - 主文件结构初始化">
+      <change afterPath="$PROJECT_DIR$/back/src/components/params.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/components/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/components/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/router/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,35 +19,7 @@
     <favorites_list name="myVue" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/back/src/components/categories.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="141" column="44" lean-forward="true" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
-              <folding>
-                <element signature="n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#el-table-column#2;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#template#0;n#el-table-column#2;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#el-table-column#3;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#template#0;n#el-table-column#3;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#el-table-column#3;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#el-pagination#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-                <element signature="n#style#0;n#el-cascader#0;n#el-form-item#1;n#el-form#0;n#div#0;n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#1105#1115#0" />
-                <element signature="e#1532#1550#0" />
-                <element signature="e#3021#3049#0" />
-                <element signature="e#3317#3434#0" />
-                <element signature="e#1070#1077#0" />
-                <element signature="e#2076#2083#0" />
-                <element signature="e#3875#3889#0" />
-                <element signature="e#3874#4145#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,6 +29,13 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>attrTags</find>
+      <find>attributesData</find>
+      <find>add</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -86,9 +64,11 @@
         <option value="$PROJECT_DIR$/back/src/assets/css/global.less" />
         <option value="$PROJECT_DIR$/back/src/components/users.vue" />
         <option value="$PROJECT_DIR$/back/src/components/roles.vue" />
-        <option value="$PROJECT_DIR$/back/src/router/index.js" />
         <option value="$PROJECT_DIR$/back/src/components/index.vue" />
         <option value="$PROJECT_DIR$/back/src/components/categories.vue" />
+        <option value="$PROJECT_DIR$/back/src/components/param.vue" />
+        <option value="$PROJECT_DIR$/back/src/router/index.js" />
+        <option value="$PROJECT_DIR$/back/src/components/params.vue" />
       </list>
     </option>
   </component>
@@ -128,20 +108,6 @@
               <item name="myVue" type="462c0819:PsiDirectoryNode" />
               <item name="back" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myVue" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myVue" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -226,7 +192,8 @@
       <workItem from="1556345133097" duration="15690000" />
       <workItem from="1556516552345" duration="5504000" />
       <workItem from="1556526471303" duration="6677000" />
-      <workItem from="1556545892148" duration="7706000" />
+      <workItem from="1556545892148" duration="7985000" />
+      <workItem from="1556612581795" duration="17861000" />
     </task>
     <task id="LOCAL-00001" summary="尝试push新文件">
       <created>1555334759622</created>
@@ -260,7 +227,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73111000" />
+    <option name="totallyTimeSpent" value="91251000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -273,14 +240,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985591" visible="true" weight="0.13277134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50144094" side_tool="true" weight="0.13066386" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.15170941" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.16987179" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -368,20 +334,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/assets/css/global.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/back/src/components/public/breadcrumb.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -415,16 +367,6 @@
             <element signature="n#el-main#0;n#el-container#0;n#el-container#0;n#template#0;n#!!top" />
             <element signature="e#1456#2155#0" />
             <element signature="n#style#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -464,12 +406,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/back/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/back/src/components/rights.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        <state relative-caret-position="300">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
           <folding>
-            <element signature="n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-table-column#3;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#template#0;n#el-table-column#3;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#script#0;n#!!top" />
           </folding>
         </state>
@@ -477,11 +437,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/back/src/components/roles.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+        <state relative-caret-position="390">
+          <caret line="40" column="36" lean-forward="true" selection-start-line="40" selection-start-column="36" selection-end-line="46" selection-end-column="21" />
           <folding>
             <element signature="n#div#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#el-table-column#0;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#template#0;n#el-table-column#0;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#el-row#0;n#template#0;n#el-table-column#0;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
@@ -508,25 +467,127 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/back/src/components/categories.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="141" column="44" lean-forward="true" selection-start-line="141" selection-start-column="44" selection-end-line="141" selection-end-column="44" />
+        <state relative-caret-position="209">
+          <caret line="79" column="11" lean-forward="true" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
           <folding>
             <element signature="n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-table-column#1;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#template#0;n#el-table-column#1;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#i#0;n#template#0;n#el-table-column#1;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#el-table-column#2;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#template#0;n#el-table-column#2;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#el-table-column#3;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#template#0;n#el-table-column#3;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#el-table-column#3;n#el-table#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
             <element signature="n#el-pagination#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="n#style#0;n#el-cascader#0;n#el-form-item#1;n#el-form#0;n#div#0;n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#1105#1115#0" />
-            <element signature="e#1532#1550#0" />
-            <element signature="e#3021#3049#0" />
-            <element signature="e#3317#3434#0" />
-            <element signature="e#1070#1077#0" />
-            <element signature="e#2076#2083#0" />
-            <element signature="e#3875#3889#0" />
-            <element signature="e#3874#4145#0" />
+            <element signature="n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#0;n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-form#0;n#div#0;n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-form-item#0;n#el-form#0;n#div#0;n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-form-item#1;n#el-form#0;n#div#0;n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-cascader#0;n#el-form-item#1;n#el-form#0;n#div#0;n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#1;n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="e#2835#2869#0" />
+            <element signature="e#2948#3014#0" />
+            <element signature="e#3088#3160#0" />
+            <element signature="e#3188#3271#0" />
+            <element signature="e#3356#3446#0" />
+            <element signature="e#3501#3772#0" />
+            <element signature="e#3633#3690#0" />
+            <element signature="e#3803#3886#0" />
+            <element signature="e#3915#3988#0" />
+            <element signature="e#4020#4236#0" />
+            <element signature="e#4137#4194#0" />
+            <element signature="e#4268#4904#0" />
+            <element signature="e#4330#4897#0" />
+            <element signature="e#4351#4889#0" />
+            <element signature="e#4430#4566#0" />
+            <element signature="e#4694#4759#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/assets/css/global.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/src/components/params.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="322" lean-forward="true" selection-start-line="322" selection-end-line="322" />
+          <folding>
+            <element signature="n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-row#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-col#0;n#el-row#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-cascader#0;n#el-col#1;n#el-row#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-tab-pane#0;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-button#0;n#el-tab-pane#0;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-table#0;n#el-tab-pane#0;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-table-column#0;n#el-table#0;n#el-tab-pane#0;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#template#0;n#el-table-column#0;n#el-table#0;n#el-tab-pane#0;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-tag#0;n#template#0;n#el-table-column#0;n#el-table#0;n#el-tab-pane#0;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-input#0;n#template#0;n#el-table-column#0;n#el-table#0;n#el-tab-pane#0;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-table-column#3;n#el-table#0;n#el-tab-pane#0;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#template#0;n#el-table-column#3;n#el-table#0;n#el-tab-pane#0;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-button#0;n#template#0;n#el-table-column#3;n#el-table#0;n#el-tab-pane#0;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-tab-pane#1;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-button#0;n#el-tab-pane#1;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-table#0;n#el-tab-pane#1;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-table-column#0;n#el-table#0;n#el-tab-pane#1;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#template#0;n#el-table-column#0;n#el-table#0;n#el-tab-pane#1;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-tag#0;n#template#0;n#el-table-column#0;n#el-table#0;n#el-tab-pane#1;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-input#0;n#template#0;n#el-table-column#0;n#el-table#0;n#el-tab-pane#1;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-table-column#3;n#el-table#0;n#el-tab-pane#1;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#template#0;n#el-table-column#3;n#el-table#0;n#el-tab-pane#1;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-button#0;n#template#0;n#el-table-column#3;n#el-table#0;n#el-tab-pane#1;n#el-tabs#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#0;n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-form#0;n#div#0;n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-form-item#0;n#el-form#0;n#div#0;n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#1;n#el-dialog#0;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-dialog#1;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#0;n#el-dialog#1;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-form#0;n#div#0;n#el-dialog#1;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#el-form-item#0;n#el-form#0;n#div#0;n#el-dialog#1;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="n#div#1;n#el-dialog#1;n#el-card#0;n#div#0;n#template#0;n#!!top" />
+            <element signature="e#5297#5331#0" />
+            <element signature="e#5342#5852#0" />
+            <element signature="e#5355#5848#0" />
+            <element signature="e#5440#5530#0" />
+            <element signature="e#5680#5733#0" />
+            <element signature="e#5755#5842#0" />
+            <element signature="e#6811#6898#0" />
+            <element signature="e#6922#9386#0" />
+            <element signature="e#5897#6092#0" />
+            <element signature="e#5993#6050#0" />
+            <element signature="e#6138#6591#0" />
+            <element signature="e#6347#6404#0" />
+            <element signature="e#6435#6548#0" />
+            <element signature="e#6472#6540#0" />
+            <element signature="e#6614#6772#0" />
+            <element signature="e#6668#6717#0" />
+            <element signature="e#6795#7166#0" />
+            <element signature="e#6828#6869#0" />
+            <element signature="e#6904#7101#0" />
+            <element signature="e#6082#6507#0" />
+            <element signature="e#6125#6223#0" />
+            <element signature="e#6236#6335#0" />
+            <element signature="e#6964#6971#0" />
+            <element signature="e#7660#8014#0" />
+            <element signature="e#7717#8007#0" />
+            <element signature="e#7738#7999#0" />
+            <element signature="e#7968#7994#0" />
+            <element signature="e#8308#8322#0" />
+            <element signature="e#9383#9390#0" />
+            <element signature="e#9485#9921#0" />
+            <element signature="e#9506#9913#0" />
+            <element signature="e#9652#9717#0" />
+            <element signature="e#10129#10479#0" />
+            <element signature="e#10173#10271#0" />
+            <element signature="e#10284#10385#0" />
+            <element signature="e#10429#10494#0" />
           </folding>
         </state>
       </provider>
