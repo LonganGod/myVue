@@ -205,7 +205,7 @@ export default {
       editAttrForm: {},
       editAttrRules: {
         attr_name: [{required: true, message: '请选择属性或参数名称', trigger: 'blur'}]
-      },
+      }
     }
   },
   methods: {
@@ -231,7 +231,8 @@ export default {
     },
     selectedChange() {
       if (this.selectedCategoriesData.length === 0) {
-        return this.attributesData = []
+        this.attributesData = []
+        return
       }
       this.getAttributesList(this.activeTabName)
     },

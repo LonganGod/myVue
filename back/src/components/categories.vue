@@ -25,8 +25,11 @@
           </template>
         </el-table-column>
         <el-table-column prop="path" label="操作" width="400">
-          <el-button type="primary" icon="el-icon-edit" size="mini" @click="">编辑</el-button>
-          <el-button type="danger" icon="el-icon-delete" size="mini" @click="">删除</el-button>
+          <template slot-scope="info">
+            <el-button type="primary" icon="el-icon-edit" size="mini" @click="showEditCategoriesBox(info.row)">编辑
+            </el-button>
+            <el-button type="danger" icon="el-icon-delete" size="mini" @click="delCategories(info.row)">删除</el-button>
+          </template>
         </el-table-column>
       </el-table>
       <!--分页-->
@@ -40,7 +43,7 @@
       </el-pagination>
       <!--添加分类-->
       <el-dialog
-        title="提示"
+        title="添加分类"
         :visible.sync="addCategoriesBox"
       >
         <div>
@@ -65,6 +68,23 @@
         <div slot="footer" class="dialog-footer">
           <el-button @click="addCategoriesBox = false">取 消</el-button>
           <el-button type="primary" @click="submitAddCategoriesForm">确 定</el-button>
+        </div>
+      </el-dialog>
+      <!--编辑分类-->
+      <el-dialog
+        title="编辑分类"
+        :visible.sync="editCategoriesBox"
+      >
+        <div>
+          <el-form ref="editCategoriesForm" :model="editCategoriesForm" :rules="editCategoriesRules" label-width="80px">
+            <el-form-item label="活动名称" prop="cat_name">
+              <el-input v-model="editCategoriesForm.cat_name" placeholder="请输入活动新名称"></el-input>
+            </el-form-item>
+          </el-form>
+        </div>
+        <div slot="footer" class="dialog-footer">
+          <el-button @click="editCategoriesBox = false">取 消</el-button>
+          <el-button type="primary" @click="submitEditCategoriesForm">确 定</el-button>
         </div>
       </el-dialog>
     </el-card>
@@ -100,6 +120,14 @@ export default {
         value: 'cat_id',
         label: 'cat_name',
         children: 'children'
+      },
+      editCategoriesBox: false,
+      editCategoriesForm: {
+        cat_id: 0,
+        cat_name: ''
+      },
+      editCategoriesRules: {
+        cat_name: [{required: true, message: '请输入活动名称', trigger: 'blur'}]
       }
     }
   },
@@ -131,7 +159,7 @@ export default {
       this.$refs.addCategoriesForm.validate(async(valid) => {
         if (valid) {
           const arr = this.selectedCategories
-          if (arr.length != 0) {
+          if (arr.length !== 0) {
             this.addCategoriesForm.cat_pid = arr[arr.length - 1]
             this.addCategoriesForm.cat_level = arr.length
           }
@@ -143,6 +171,37 @@ export default {
           this.addCategoriesBox = false
           this.getCategoriesData()
         }
+      })
+    },
+    showEditCategoriesBox(catObj) {
+      this.editCategoriesForm.cat_id = catObj.cat_id
+      this.editCategoriesBox = true
+    },
+    submitEditCategoriesForm() {
+      this.$refs.editCategoriesForm.validate(async(valid) => {
+        if (valid) {
+          const {data: dt} = await this.$http.put(`categories/${this.editCategoriesForm.cat_id}`, this.editCategoriesForm)
+          if (dt.meta.status !== 200) {
+            return this.$message.error(dt.meta.msg)
+          }
+          this.$message.success(dt.meta.msg)
+          this.editCategoriesBox = false
+          this.getCategoriesData()
+        }
+      })
+    },
+    delCategories(catObj) {
+      this.$confirm('此操作将永久删除该商品分类，是否继续？', '删除', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(async() => {
+        const {data: dt} = await this.$http.delete('categories/' + catObj.cat_id)
+        if (dt.meta.status !== 200) {
+          return this.$message.error(dt.meta.msg)
+        }
+        this.$message.success(dt.meta.msg)
+        this.getCategoriesData()
       })
     }
   }
