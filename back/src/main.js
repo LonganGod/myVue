@@ -3,12 +3,22 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import axios from 'axios'
+import moment from 'moment'
+import VueQuillEditor from 'vue-quill-editor'
 
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 import './assets/css/global.less'
 import './assets/fonts/iconfont.css'
 import breadcrumb from './components/public/breadcrumb.vue'
 
 Vue.use(ElementUI)
+Vue.use(VueQuillEditor)
+
+Vue.filter('dateFormat', date => {
+  return moment(date).format('YYYY-MM-DD')
+})
 
 axios.defaults.baseURL = 'http://127.0.0.1:11333/api/private/v1/'
 axios.interceptors.request.use(function(config) {
