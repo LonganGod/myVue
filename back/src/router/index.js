@@ -10,6 +10,7 @@ import Categories from '@/components/categories'
 import Params from '@/components/params'
 import Goods from '@/components/goods'
 import AddGoods from '@/components/addGoods'
+import EditGoods from '@/components/editGoods'
 
 Vue.use(Router)
 
@@ -28,7 +29,8 @@ var router = new Router({
         {path: '/categories', component: Categories},
         {path: '/params', component: Params},
         {path: '/goods', component: Goods},
-        {path: '/addGoods', component: AddGoods}
+        {path: '/addGoods', component: AddGoods},
+        {path: '/editGoods/:id', component: EditGoods, props: true}
       ]
     }
   ]

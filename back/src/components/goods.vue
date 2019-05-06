@@ -15,7 +15,6 @@
           <el-button type="primary" @click="goAddPage">添加商品</el-button>
         </el-col>
       </el-row>
-
       <!--表格区域-->
       <el-table :data="goodsList" stripe style="width: 100%" border>
         <el-table-column type="index" label="序号" width="50"></el-table-column>
@@ -29,17 +28,13 @@
         </el-table-column>
         <el-table-column prop label="操作" width="150">
           <template slot-scope="scope">
-            <el-button type="primary" icon="el-icon-edit" size="mini"></el-button>
-            <el-button
-              type="danger"
-              icon="el-icon-delete"
-              size="mini"
-              @click="delGoods(scope.row.goods_id)"
-            ></el-button>
+            <el-button type="primary" icon="el-icon-edit" size="mini"
+                       @click="goEditPage(scope.row.goods_id)"></el-button>
+            <el-button type="danger" icon="el-icon-delete" size="mini"
+                       @click="delGoods(scope.row.goods_id)"></el-button>
           </template>
         </el-table-column>
       </el-table>
-
       <!--分页区域-->
       <el-pagination
         @size-change="handleSizeChange"
@@ -107,6 +102,10 @@ export default {
     // 跳转到添加商品页面
     goAddPage() {
       this.$router.push('addGoods')
+    },
+    // 跳转到编辑商品页面
+    goEditPage(goodsId) {
+      this.$router.push(`editGoods/${goodsId}`)
     },
     // 根据关键字检索数据
     search() {
