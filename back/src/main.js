@@ -5,13 +5,13 @@ import ElementUI from 'element-ui'
 import axios from 'axios'
 import moment from 'moment'
 import VueQuillEditor from 'vue-quill-editor'
+import breadcrumb from './components/public/breadcrumb.vue'
 
 import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 import './assets/css/global.less'
 import './assets/fonts/iconfont.css'
-import breadcrumb from './components/public/breadcrumb.vue'
 
 Vue.use(ElementUI)
 Vue.use(VueQuillEditor)
