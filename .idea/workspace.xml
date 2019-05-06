@@ -133,7 +133,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="width" value="976" />
     <option name="height" value="1088" />
@@ -157,26 +157,6 @@
               <item name="myVue" type="b2602c69:ProjectViewProjectNode" />
               <item name="myVue" type="462c0819:PsiDirectoryNode" />
               <item name="back" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myVue" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myVue" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myVue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myVue" type="462c0819:PsiDirectoryNode" />
-              <item name="back" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="router" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -269,7 +249,7 @@
       <workItem from="1556870136859" duration="2920000" />
       <workItem from="1557045877273" duration="11533000" />
       <workItem from="1557060962698" duration="4138000" />
-      <workItem from="1557116284100" duration="7067000" />
+      <workItem from="1557116284100" duration="7349000" />
     </task>
     <task id="LOCAL-00001" summary="尝试push新文件">
       <created>1555334759622</created>
@@ -303,7 +283,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116909000" />
+    <option name="totallyTimeSpent" value="117191000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -315,15 +295,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985591" visible="true" weight="0.13277134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50144094" side_tool="true" weight="0.13066386" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16987179" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.16987179" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
